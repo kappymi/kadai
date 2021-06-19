@@ -58,6 +58,16 @@
     directionalLight2.position.set(-1, 1, 1);
     // シーンに追加
     scene.add(directionalLight2);
+    
+    var textureLoader = new THREE.TextureLoader(); 
+    var texture = textureLoader.load("pokemonbattle.jpg");
+    const material = new THREE.SpriteMaterial({ map: texture,});
+    const sprite = new THREE.Sprite(material);
+    sprite.position.x = 0;
+    sprite.position.y = 0;
+    sprite.position.z = 0;
+    sprite.scale.set(100,100,100);
+    scene.add(sprite);
 
   // 初回実行
   var update = function() {
