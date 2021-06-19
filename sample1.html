@@ -55,8 +55,8 @@
         // モンスターボールを作成(原点に作成)
         var geometry = new THREE.SphereGeometry(50, 30, 30);
         var monbo = new THREE.Mesh(geometry, mat);
-        monbo.position.x = 30;
-        monbo.position.y = 100;
+        monbo.position.x = 50;
+        monbo.position.y = 120;
         monbo.position.z = 50;
         scene.add(monbo);
         
@@ -68,7 +68,7 @@
         const sprite = new THREE.Sprite(material);
         sprite.position.x = 0;
         sprite.position.y = 0;
-        sprite.position.z = -100;
+        sprite.position.z = 0;
         sprite.scale.set(1000,700,500);
         scene.add(sprite);
         
