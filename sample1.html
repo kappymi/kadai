@@ -55,6 +55,9 @@
         // モンスターボールを作成(原点に作成)
         var geometry = new THREE.SphereGeometry(50, 30, 30);
         var monbo = new THREE.Mesh(geometry, mat);
+        monbo.position.x = 0;
+        monbo.position.y = 0;
+        monbo.position.z = 0;
         scene.add(monbo);
         
         // バトル画面をスプライトで作成
@@ -63,16 +66,12 @@
         const material = new THREE.SpriteMaterial({ map: texture,});
 
         const sprite = new THREE.Sprite(material);
-        sprite.position.x = 0;
-        sprite.position.y = 0;
+        sprite.position.x = 20;
+        sprite.position.y = 10;
         sprite.position.z = 0;
         sprite.scale.set(1000,700,500);
         scene.add(sprite);
         
-          
-
-
-      
         tick();
 
         // 毎フレーム時に実行されるループイベントです
