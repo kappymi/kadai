@@ -52,10 +52,10 @@
         var mat = new THREE.MeshPhongMaterial();
         mat.map = texture;
 
-        // 地球を作成(原点に作成)
+        // モンスターボールを作成(原点に作成)
         var geometry = new THREE.SphereGeometry(50, 30, 30);
-        var earth = new THREE.Mesh(geometry, mat);
-        scene.add(earth);
+        var monbo = new THREE.Mesh(geometry, mat);
+        scene.add(monbo);
 
         tick();
 
