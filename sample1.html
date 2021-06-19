@@ -27,6 +27,11 @@
   
     // カメラを作成
   var camera = new THREE.PerspectiveCamera(45, width / height, 1, 1000);
+    // カメラの初期座標を設定
+  camera.position.set(0, 0, 1000);
+
+    // カメラコントローラーを作成
+  const controls = new THREE.OrbitControls(camera,document.body);
 
  // テクスチャー読み込み
  var textureLoader = new THREE.TextureLoader();  
@@ -77,22 +82,14 @@
         sprite1.scale.set(500,500,500);
         scene.add(sprite1);
     
-  // 初回実行
-  var update = function() {
-    requestAnimationFrame(update);
+  tick();
 
-    // 箱を回転させる
-    box.rotation.x += 0.01;
-    box.rotation.y += 0.01;
-
-    // 球を回転させる
-    sphere.rotation.y += 0.01;
-
-    renderer.render(scene, camera);
-  };
-  update();
-}
-  window.addEventListener('DOMContentLoaded', init);
+        // 毎フレーム時に実行されるループイベントです
+        function tick() {
+          // レンダリング
+          renderer.render(scene, camera);
+          requestAnimationFrame(tick);
+        }
 </script>
 </body>
 </html>
