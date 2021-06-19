@@ -52,7 +52,7 @@
         var mat = new THREE.MeshPhongMaterial();
         mat.map = texture;
 
-        // モンスターボールを作成(原点に作成)
+        // モンスターボールを作成
         var geometry = new THREE.SphereGeometry(50, 30, 30);
         var monbo = new THREE.Mesh(geometry, mat);
         monbo.position.x = 50;
