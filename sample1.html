@@ -32,7 +32,6 @@
  var textureLoader = new THREE.TextureLoader();  
   var texture = textureLoader.load("monbo.jpg");
   var mat = new THREE.MeshPhongMaterial();
-  THREE.MeshLambertMaterial( {transparent: true} );
   mat.map = texture;
 
   // 箱を作成
