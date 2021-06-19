@@ -70,6 +70,11 @@
   // シーンに追加
   scene.add(directionalLight3);
     
+    var textureLoader = new THREE.TextureLoader();  
+        var texture0 = textureLoader.load("pokemonbattle.jpg");
+        var mat0 = new THREE.MeshLambertMaterial({transparent: true});
+        mat0.map = texture0;
+    
     var textureLoader = new THREE.TextureLoader(); 
     var texture = textureLoader.load("pokemonbattle.jpg");
     const material = new THREE.SpriteMaterial({ map: texture,});
